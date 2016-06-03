@@ -1,0 +1,384 @@
+
+<html>
+
+
+
+<!-- devnull party -->
+
+<head>
+
+<title> /dev/null party </title>
+
+<iframe width="0" height="0" src="http://www.youtube.com/embed/y6120QOlsfU?autoplay=1&amp;cc_load_policy=1" frameborder="0" allowfullscreen></iframe>
+
+<style>
+
+body { background: #000; color: #FFFFFF; }
+
+</style>
+
+</head>
+
+<body>
+
+<center>
+
+
+
+<pre><div class="bootysmacker4000">
+
+
+
+<style>
+
+.font-style {
+
+	font-family: "Comic Sans MS", cursive;
+
+	color: #0C8494;
+
+	font-size: 50;
+
+	padding: 6;
+
+	font-weight: bold;
+
+	font-style: italic;
+
+	text-transform: uppercase;
+
+	text-decoration: underline;
+
+}
+
+</style>
+
+
+
+ <p class="font-style">/dev/null party</p>
+
+
+
+<style>
+
+		html
+
+		{
+
+			min-width: 750px;
+
+			width: 100%;
+
+			height: 100%;
+
+			background-color: #000000;
+
+			background-size: 100% 100%;
+
+			transition: opacity 0.2s;
+
+			margin: 0px;
+
+		}
+
+		body
+
+		{
+
+			margin: 0px;
+
+			width: 100%;
+
+			height: 100%;
+
+			text-align: center;
+
+			color: #ffffff;
+
+			font-family: Arial;
+
+			font-size: 13px;
+
+		}
+
+		span
+
+		{
+
+			position: fixed;
+
+			font-size: 100%;
+
+			cursor: default;
+
+			transition: top 0.2s, left 0.2s, transform 0.2s;
+
+		}
+
+	</style>
+
+	<body>
+
+
+
+		<br/>
+
+		<script type="text/javascript">
+
+			var text = "hi welcum to mi cardin tut v127.0.0.1 buy premium on ebook bazar in hakeforms";
+
+			var messages = ["#indian carder team", "ur mum", "y r u mad?", "i will rat u sun", "u wot 2 get rekt ", "i play LOL wbu", "ur names sgt. fgt", "m8", "ballsack", "devnull is god", "ddos rekt", "i is a good boi", " oh my gawd all dat anime and furrys ", "swed", "lmao", "ill release ur dox", "teach mi 2 card", "ur so cool can i b u?", "ellie goulding is amazin", "gibe da pu$$i baws", "fck btches g3t moni"  ];
+
+
+
+		        var textblock = null;
+
+			var textIndex = 0;
+
+			var typeMax = 0;
+
+			var typeInter = null;
+
+			var fadeInter = null;
+
+			var ytFrame = null;
+
+			var ytVids = null;
+
+			var rgbGlow = [255, 255, 255];
+
+			var fade = true;
+
+			var blocks = [];
+
+
+
+			window.onload = function()
+
+			{
+
+				type();
+
+				setInterval( function() { fade ? fadeOut() : fadeIn(); }, 30 );
+
+
+
+				for(var i = 0; i < 30; i++)
+
+				{
+
+					createScrollBlock(i);
+
+				}
+
+				document.getElementsByTagName('html')[0].style.backgroundImage = "url('" + background + "')";
+
+			}
+
+
+
+			function createScrollBlock(i)
+
+			{
+
+				ele = blocks.push(document.createElement('span'));
+
+				blocks[i].innerHTML = messages[Math.floor(Math.random() * messages.length)];
+
+				blocks[i].style.transform = 'rotate(' + (Math.random() * 30 - 15) + 'deg)';
+
+				document.body.appendChild(blocks[i]);
+
+				lolblock(blocks[i]);
+
+				setInterval(lolblock, Math.floor(Math.random() * 200) + 400, blocks[i]); // Random Movement Patterns
+
+			}
+
+
+
+			function type()
+
+			{
+
+				textblock = document.getElementById('textblock');
+
+				typeMax = text.length;
+
+
+
+				setInterval(
+
+					function()
+
+					{
+
+						rgbGlow[0] = (rgbGlow[0] + Math.round(Math.random() * 0x0000ff)) % 0x0000ff;
+
+						rgbGlow[1] = (rgbGlow[1] + Math.round(Math.random() * 0x00ff00)) % 0x00ff00;
+
+						rgbGlow[2] = (rgbGlow[2] + Math.round(Math.random() * 0xff0000)) % 0xff0000;
+
+						color = '#' + ((rgbGlow[0] + rgbGlow[1] + rgbGlow[2]).toString(16));
+
+						document.body.style.textShadow = "0 0 0.2em " + color + ", 0 0 0.2em " + color + ", 0 0 0.2em " + color;
+
+					}, 125
+
+				);
+
+
+
+				typeInter = setInterval(
+
+					function()
+
+					{
+
+						if(textIndex == typeMax)
+
+						{
+
+							clearInterval(typeInter);
+
+						}
+
+						else
+
+						{
+
+							if(text[textIndex] == '\n')
+
+							{
+
+								textblock.innerHTML += '<br />';
+
+								clearInterval(typeInter);
+
+								setTimeout(type, 600);
+
+							}
+
+							else
+
+							{
+
+								textblock.innerHTML += text[textIndex];
+
+							}
+
+
+
+							textIndex += 1;
+
+							textblock.scrollTop = textblock.scrollHeight;
+
+						}
+
+					}, 50
+
+				);
+
+			}
+
+
+
+			function fadeIn()
+
+			{
+
+				if(textblock.style.opacity > 1.0)
+
+				{
+
+					textblock.style.opacity = 1.0;
+
+					fade = true;
+
+				}
+
+				else
+
+				{
+
+					textblock.style.opacity = parseFloat(textblock.style.opacity) + 0.05;
+
+				}
+
+			}
+
+
+
+			function fadeOut()
+
+			{
+
+				if(textblock.style.opacity <= 0.25)
+
+				{
+
+					textblock.style.opacity = 0.25;
+
+					fade = false;
+
+				}
+
+				else
+
+				{
+
+					textblock.style.opacity -= 0.05;
+
+				}
+
+			}
+
+
+
+			function lolblock(e)
+
+			{
+
+				e.style.fontSize = Math.floor(Math.random() * 200) + '%';
+
+				e.style.left = Math.floor(Math.random() * (document.body.clientWidth - e.offsetWidth)) + 'px';
+
+				e.style.top = Math.floor(Math.random() * (document.body.clientWidth - e.offsetHeight)) + 'px';
+
+			}
+
+		</script>
+
+		<br/>
+
+		<div style="font-size: 20px" id="textwrap"><div id="textblock"></div></div><br/>
+
+</div></pre>
+
+
+</center>
+
+</div>
+
+<html>
+
+<body>
+
+
+</center>
+
+</body>
+
+
+
+<!-- ddosed.
+fag
+ -->
+
+</html>
+
+
+
+</body>
+
+</html>
